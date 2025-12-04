@@ -1,46 +1,54 @@
-import clsx from "clsx";
-import { ButtonHTMLAttributes } from "react";
+"use client";
 
-const variantClasses = {
-  primary:
-    "bg-[#61CE70] text-moss shadow-card hover:bg-[#4fb65d] focus-visible:ring-forest",
-  outline:
-    "border border-forest text-forest hover:bg-forest hover:text-sand-light focus-visible:ring-forest",
-  ghost:
-    "text-forest hover:text-clay focus-visible:ring-clay",
-};
-
-const sizeClasses = {
-  sm: "px-4 py-2 text-xs font-semibold uppercase tracking-[0.08em] leading-snug",
-  md: "px-8 py-3 text-sm font-semibold uppercase tracking-[0.1em] leading-snug",
-  lg: "px-10 py-4 text-base font-semibold uppercase tracking-[0.12em] leading-snug",
-};
-
-export type ButtonVariant = keyof typeof variantClasses;
-export type ButtonSize = keyof typeof sizeClasses;
-
-export const buttonClasses = (
-  variant: ButtonVariant = "primary",
-  size: ButtonSize = "md",
-  className?: string,
-) =>
-  clsx(
-    "inline-flex items-center justify-center rounded-full transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent disabled:cursor-not-allowed disabled:opacity-60",
-    variantClasses[variant],
-    sizeClasses[size],
-    className,
-  );
+import { ButtonHTMLAttributes, MouseEvent } from "react";
+import {
+  buttonClasses,
+  ButtonSize,
+  ButtonVariant,
+} from "./buttonStyles";
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: ButtonVariant;
   size?: ButtonSize;
 };
 
+const triggerRipple = (event: MouseEvent<HTMLButtonElement>) => {
+  const target = event.currentTarget;
+  const rect = target.getBoundingClientRect();
+  const x = event.clientX - rect.left;
+  const y = event.clientY - rect.top;
+  target.style.setProperty("--water-x", `${x}px`);
+  target.style.setProperty("--water-y", `${y}px`);
+  target.classList.remove("water-ripple-active");
+  // force reflow to restart animation
+  void target.offsetWidth;
+  target.classList.add("water-ripple-active");
+};
+
 export const Button = ({
   className,
   variant = "primary",
   size = "md",
+  onMouseMove,
+  onMouseLeave,
   ...props
-}: ButtonProps) => (
-  <button className={buttonClasses(variant, size, className)} {...props} />
-);
+}: ButtonProps) => {
+  const handleMouseMove = (event: MouseEvent<HTMLButtonElement>) => {
+    triggerRipple(event);
+    onMouseMove?.(event);
+  };
+
+  const handleMouseLeave = (event: MouseEvent<HTMLButtonElement>) => {
+    event.currentTarget.classList.remove("water-ripple-active");
+    onMouseLeave?.(event);
+  };
+
+  return (
+    <button
+      className={buttonClasses(variant, size, className)}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      {...props}
+    />
+  );
+};

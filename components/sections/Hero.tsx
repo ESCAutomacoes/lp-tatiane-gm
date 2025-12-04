@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import Section from "@/components/layout/Section";
-import { buttonClasses } from "@/components/ui/Button";
+import { buttonClasses } from "@/components/ui/buttonStyles";
 
 const highlights = [
   "Aprenda a lidar com birras sem gritos.",

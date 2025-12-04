@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Section from "@/components/layout/Section";
-import { buttonClasses } from "@/components/ui/Button";
+import { buttonClasses } from "@/components/ui/buttonStyles";
 
 const learnings = [
   "Como aplicar princípios bíblicos práticos para disciplinar com amor e sabedoria.",

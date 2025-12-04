@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import Container from "./Container";
-import { buttonClasses } from "@/components/ui/Button";
+import { buttonClasses } from "@/components/ui/buttonStyles";
 
 const navItems = [
   { label: "Inscrição", href: "#inscricao" },

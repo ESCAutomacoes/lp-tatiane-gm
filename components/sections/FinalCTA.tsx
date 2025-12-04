@@ -1,5 +1,5 @@
 import Section from "@/components/layout/Section";
-import { buttonClasses } from "@/components/ui/Button";
+import { buttonClasses } from "@/components/ui/buttonStyles";
 import { siteConfig } from "@/config/site";
 import Link from "next/link";
 

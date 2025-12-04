@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { buttonClasses } from "@/components/ui/Button";
+import { buttonClasses } from "@/components/ui/buttonStyles";
 
 const NotFound = () => {
   return (
