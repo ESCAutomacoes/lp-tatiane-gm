@@ -15,12 +15,43 @@
 
   body {
     font-family: var(--font-body), sans-serif;
-    background-color: #d19576;
+    background-color: #e2d4b3;
     color: #2d4b38;
     min-height: 100vh;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
   }
+
+  .scroll-flip {
+    --scroll-flip-rotation: 0deg;
+    transform: rotateX(var(--scroll-flip-rotation));
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    transition: transform 0.2s linear;
+    will-change: transform;
+    perspective: 1200px;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+  }
+
+  .reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal-visible {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+  }
+
 }
 
 @layer utilities {

@@ -13,8 +13,8 @@ const Testimonials = () => {
   return (
     <Section id="conteudo" className="bg-page text-moss">
       <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
-        <div className="relative overflow-hidden rounded-[40px] bg-highlight p-8 text-white shadow-card">
-          <div className="text-sm uppercase tracking-[0.5em] text-clay">
+        <div className="relative overflow-hidden rounded-[40px] bg-[#336569] p-8 text-white shadow-card">
+          <div className="text-sm uppercase tracking-[0.5em] text-white">
             Sua mentora
           </div>
           <p className="mt-3 font-display text-3xl">Tatiane Joslin</p>
@@ -22,7 +22,7 @@ const Testimonials = () => {
             Pastora e mentora de mães cristãs, com uma mensagem fundamentada na
             Bíblia para restaurar famílias.
           </p>
-          <div className="mt-8 flex flex-col gap-4 rounded-[32px] bg-highlight/80 p-6 text-center text-white">
+          <div className="mt-8 flex flex-col gap-4 rounded-[32px] bg-[#336569]/80 p-6 text-center text-white">
             <p className="text-sm uppercase tracking-[0.4em] text-white/70">
               Ao vivo
             </p>
@@ -39,7 +39,7 @@ const Testimonials = () => {
           <ul className="space-y-4 text-base text-moss/90">
             {learnings.map((item) => (
               <li key={item} className="flex items-start gap-3">
-                <span className="mt-1 text-2xl text-accent">✶</span>
+                <span className="mt-1 text-2xl text-[#336569]">✶</span>
                 {item}
               </li>
             ))}

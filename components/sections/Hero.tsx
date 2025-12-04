@@ -16,18 +16,18 @@ const Hero = () => {
       <div className="bg-page">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-4 py-12 sm:px-6 lg:flex-row lg:items-center lg:gap-16 lg:py-16">
           <div className="order-2 flex flex-1 flex-col gap-6 lg:order-1">
-            <div className="text-sm uppercase tracking-[0.5em] text-clay">
+            <div className="text-sm uppercase tracking-[0.5em] text-[#336569]">
               Workshop Exclusivo
             </div>
-            <h1 className="font-display text-4xl leading-tight text-forest sm:text-5xl lg:text-6xl">
+            <h1 className="font-display text-4xl leading-tight text-[#336569] sm:text-5xl lg:text-6xl">
               Do Caos à Paz
             </h1>
-            <p className="max-w-2xl text-lg text-clay">
+            <p className="max-w-2xl text-lg text-[#336569]">
               Descubra o caminho bíblico para disciplinar com amor e sabedoria.
               Aprenda a lidar com birras, transforme desobediência em respeito e
               convide a paz para cada cômodo do seu lar.
             </p>
-            <div className="rounded-3xl border border-forest/40 bg-highlight p-6 text-white shadow-card">
+            <div className="rounded-3xl border border-forest/40 bg-[#336569] p-6 text-white shadow-card">
               <p className="text-sm font-semibold uppercase tracking-[0.4em] text-white/80">
                 {siteConfig.eventDate}
               </p>
@@ -47,20 +47,17 @@ const Hero = () => {
               >
                 {siteConfig.ctaText}
               </Link>
-              <p className="text-sm text-forest/70">
-                Uma aula ao vivo e gratuita dedicada a mães cristãs.
-              </p>
             </div>
           </div>
           <div className="order-1 flex flex-1 justify-center lg:order-2">
-            <div className="relative flex h-[360px] w-[360px] items-center justify-center rounded-full bg-page shadow-card">
-              <div className="absolute inset-6 rounded-full border-4 border-page/60" />
+            <div className="relative flex h-[360px] w-[360px] items-center justify-center rounded-full bg-[#bf9579] shadow-card">
+              <div className="absolute inset-6 rounded-full border-4 border-[#bf9579]/60" />
               <Image
-                src="/images/REMOVAISSO.png"
+                src="/images/desenho-tati.webp"
                 alt="Ilustração de mãe e filho abraçados"
                 fill
                 sizes="(min-width: 1024px) 360px, 280px"
-                className="object-contain p-10"
+                className="object-cover rounded-full"
                 priority
               />
             </div>

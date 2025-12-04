@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         // Monochromatic palette based on a light green tone used across the entire layout.
-        page: "#F3D9BA",
+        page: "#e2d4b3",
         highlight: "#336569",
         sand: {
           light: "#f2fbf3",

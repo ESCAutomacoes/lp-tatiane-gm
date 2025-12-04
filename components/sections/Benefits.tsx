@@ -17,20 +17,20 @@ const Benefits = () => {
             <p className="text-center text-sm uppercase tracking-[0.4em] text-clay">
               chega de caos!
             </p>
-            <h2 className="mt-2 font-display text-3xl text-forest">
+            <h2 className="mt-2 font-display text-3xl text-[#336569]">
               Transforme o relacionamento com seus filhos em paz e propósito
             </h2>
           </div>
-          <p className="text-lg text-clay">
+          <p className="text-lg text-[#336569]">
             Você se sente cansada, frustrada e perdida diante das birras, da
             desobediência e da bagunça diária?
           </p>
-          <p className="text-base text-forest/80">
+          <p className="text-base text-[#336569]">
             E se eu te disser que existe um caminho prático, bíblico e amoroso
             para trazer paz ao seu lar, sem gritos, sem culpa e sem se sentir
             uma péssima mãe?
           </p>
-          <div className="rounded-3xl border border-forest/40 bg-highlight p-6 text-white shadow-card">
+          <div className="rounded-3xl border border-forest/40 bg-[#336569] p-6 text-white shadow-card">
             <p className="text-lg font-display text-white">
               Esse evento é para você, mamãe cristã...
             </p>
@@ -46,7 +46,7 @@ const Benefits = () => {
             </ul>
           </div>
         </div>
-        <div className="space-y-6 rounded-3xl bg-highlight p-6 text-white shadow-card">
+        <div className="space-y-6 rounded-3xl bg-[#336569] p-6 text-white shadow-card">
           <p className="text-lg">
             Se você está cansada de gritar, de chorar escondida no banheiro ou
             de sentir culpa no fim do dia, eu quero te mostrar um caminho

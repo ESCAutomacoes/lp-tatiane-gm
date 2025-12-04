@@ -27,7 +27,7 @@ const LeadForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col gap-4 rounded-3xl border border-white/20 bg-highlight p-8 text-white shadow-card"
+      className="flex flex-col gap-4 rounded-3xl border border-white/20 bg-[#336569] p-8 text-white shadow-card"
     >
       <div>
         <label className="text-xl font-display text-white">Seu nome</label>

@@ -3,7 +3,7 @@ import { ButtonHTMLAttributes } from "react";
 
 const variantClasses = {
   primary:
-    "bg-accent text-moss shadow-card hover:bg-accent-dark focus-visible:ring-forest",
+    "bg-[#61CE70] text-moss shadow-card hover:bg-[#4fb65d] focus-visible:ring-forest",
   outline:
     "border border-forest text-forest hover:bg-forest hover:text-sand-light focus-visible:ring-forest",
   ghost:
@@ -11,9 +11,9 @@ const variantClasses = {
 };
 
 const sizeClasses = {
-  sm: "px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em]",
-  md: "px-8 py-3 text-sm font-semibold uppercase tracking-[0.3em]",
-  lg: "px-10 py-4 text-base font-semibold uppercase tracking-[0.35em]",
+  sm: "px-4 py-2 text-xs font-semibold uppercase tracking-[0.08em] leading-snug",
+  md: "px-8 py-3 text-sm font-semibold uppercase tracking-[0.1em] leading-snug",
+  lg: "px-10 py-4 text-base font-semibold uppercase tracking-[0.12em] leading-snug",
 };
 
 export type ButtonVariant = keyof typeof variantClasses;
