@@ -22,6 +22,10 @@
     -webkit-font-smoothing: antialiased;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   .water-ripple {
     --water-x: 50%;
     --water-y: 50%;
@@ -81,6 +85,10 @@
 
     .water-ripple::after {
       animation: none !important;
+    }
+
+    html {
+      scroll-behavior: auto;
     }
   }
 
