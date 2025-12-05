@@ -14,7 +14,7 @@ const Benefits = () => {
       <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
         <div className="space-y-6">
           <div>
-            <p className="text-center text-sm uppercase tracking-[0.4em] text-clay">
+            <p className="text-center text-sm uppercase tracking-[0.4em] text-[#336569]">
               chega de caos!
             </p>
             <h2 className="mt-2 font-display text-3xl text-[#336569]">

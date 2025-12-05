@@ -17,7 +17,7 @@ const Header = () => {
       <Container className="flex flex-wrap items-center gap-4 py-4">
         <div className="flex items-center">
           <div className="rounded-full border border-white/40 bg-[#bf9579] px-5 py-2 text-sm font-display uppercase tracking-[0.4em] text-white">
-            Tatiana Joslin
+            Tatiane Joslin
           </div>
         </div>
         <nav className="ml-auto hidden items-center gap-6 text-sm font-semibold text-white lg:flex">
